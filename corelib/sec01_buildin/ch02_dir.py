@@ -19,6 +19,11 @@ class C:
         self.d = d
 
 def run3():
+    """
+    命名空间的字典
+    :return: 
+    """
+
     b = 2
 
     print(vars())
