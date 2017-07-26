@@ -9,9 +9,21 @@
 """
 
 import os
+import json
 
-def run222():
+
+def run3():
+    with open('C:\\Users\\BaoQiang\\Desktop\\duitang.json', 'r', encoding='utf-8') as f, \
+            open('C:\\Users\\BaoQiang\\Desktop\\out.txt', 'w', encoding='utf-8') as fw:
+        for line in f:
+            json_data = json.loads(line.strip())
+            item_lst = (str(item).strip().replace('\n','').replace('\r','') for item in json_data.values())
+            fw.write('{}\n'.format('\t'.join(item_lst)))
+
+
+def run2():
     print(222)
+
 
 def run():
     file_cnt = 0
@@ -27,9 +39,8 @@ def run():
 
 
 def main():
-    run222()
+    run3()
 
 
 if __name__ == '__main__':
     main()
-    # print(333)
